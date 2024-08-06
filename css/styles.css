@@ -108,6 +108,27 @@ section {
     padding: 50px 20px;
 }
 
+/* .drive a{
+    text-decoration: none;
+    color: #000;
+}
+.drive a :hover{
+    color: #777;
+    text-decoration: underline;
+
+} */
+
+#resources a, #archive a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#resources a:hover, #archive a:hover {
+    color: #ff5733;
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: #000;
