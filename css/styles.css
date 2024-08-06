@@ -95,7 +95,7 @@ body {
 }
 
 .btn-project {
-    display: none; /* here i have set new project button to hide */
+    /* display: none; here i have set new project button to hide */
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
@@ -172,7 +172,7 @@ footer .container {
 }
 
 
-#instagram, #dribbble, #behance, #contact { /*used to hide instagram.. links etc. */
+#instagram, #dribbble, #behance{ /*used to hide instagram.. links etc. */
     display: none;
 }
 
