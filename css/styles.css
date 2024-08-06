@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Navbar */
 .navbar {
     background-color: #000;
     padding: 10px 20px;
@@ -107,6 +108,7 @@ section {
     padding: 50px 20px;
 }
 
+/* Footer */
 footer {
     background-color: #000;
     color: #fff;
@@ -167,15 +169,85 @@ footer .container {
     margin: 0;
 }
 
-#services_section{
+#services_section {
     display: none;
 }
 
-
-#instagram, #dribbble, #behance{ /*used to hide instagram.. links etc. */
+#instagram, #dribbble, #behance { /*used to hide instagram.. links etc. */
     display: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0; /* Adjust gap for mobile */
+    }
+
+    .navbar .nav-links a {
+        font-size: 18px; /* Slightly larger text for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Additional small screen adjustments */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar .nav-links a {
+        font-size: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-contact, .btn-project {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .footer-columns {
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
 }
