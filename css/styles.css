@@ -175,3 +175,7 @@ footer .container {
 #instagram, #dribbble, #behance, #contact { /*used to hide instagram.. links etc. */
     display: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
