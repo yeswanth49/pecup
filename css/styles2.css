@@ -106,7 +106,8 @@ body {
 }
 
 .btn-project {
-    /* display: none; here i have set new project button to hide */
+    /* here i have set new project button to hide */
+    /* display: none; */
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
@@ -281,5 +282,15 @@ html {
     .footer-columns {
         gap: 20px; /* Reduce gap for smaller screens */
     }
+}
+/* Style for links inside the address section */
+#address_section a, #reminders a {
+    color: white; /* Change to your desired color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#address_section a:hover, #reminders a :hover {
+    color: #ff5733; /* Change color on hover */
+    text-decoration: none; /* Optionally add underline on hover */
 }
 
