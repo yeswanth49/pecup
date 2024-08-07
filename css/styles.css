@@ -95,6 +95,16 @@ body {
     margin-bottom: 20px;
 }
 
+.hero-content h1 span, .hero-content p .pickup {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.hero-content h1 span:hover, .hero-content p .pickup :hover{
+    color: #ff5733;
+    cursor: default;
+}
+
 .btn-project {
     /* display: none; here i have set new project button to hide */
     background-color: #000;
