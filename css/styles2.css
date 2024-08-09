@@ -366,7 +366,6 @@ html {
 .resources-column ul li {
     margin-bottom: 0px;
 }
-
 /* Make the overlay container stick to the bottom-right corner */
 .overlay-container {
     position: fixed;
@@ -404,14 +403,18 @@ html {
     position: absolute;
     bottom: 70px; /* Adjust this value depending on how much space you need */
     left: 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.5); /* Start slightly shrunk */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
-/* Display the menu when the button is clicked */
+/* Display the menu with animation when the button is clicked */
 #menu-toggle:checked + .overlay-button + .menu {
-    display: flex;
+    opacity: 1;
+    transform: scale(1); /* Full size */
 }
 
 /* Styling for each icon in the menu */
@@ -437,3 +440,5 @@ html {
     height: 80%; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image fits within the icon without being cut off */
 }
+
+
