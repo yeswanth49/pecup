@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     font-size: 1.1rem;
 }
+
 /* Navbar */
 .navbar {
     background-color: #000;
@@ -366,22 +367,73 @@ html {
     margin-bottom: 0px;
 }
 
-.overlay-button {
+/* Make the overlay container stick to the bottom-right corner */
+.overlay-container {
     position: fixed;
-    bottom: 20px; /* Position from the bottom */
-    right: 20px;  /* Position from the right */
-    padding: 10px 20px;
-    background-color: #ff5733; /* Button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1000; /* Ensure it's on top of other elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
 }
 
-.overlay-button:hover {
-    background-color: #8e0000; /* Darker color on hover */
+/* Styling for the overlay button */
+.overlay-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Styling for the menu */
+.menu {
+    position: absolute;
+    bottom: 70px; /* Adjust this value depending on how much space you need */
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Display the menu when the button is clicked */
+#menu-toggle:checked + .overlay-button + .menu {
+    display: flex;
+}
+
+/* Styling for each icon in the menu */
+.menu-icon {
+    margin: 10px 0;
+    cursor: pointer;
+    color: black;
+    background-color: #ff5733;
+    padding: 8px; /* Reduce padding to make more room */
+    border-radius: 36%;
+    font-size: 24px;
+    text-align: center;
+    width: 35px; /* Reduce width */
+    height: 35px; /* Reduce height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the images inside the menu icons */
+.menu-icon img {
+    width: 80%; /* Scale down the image to 80% of the icon size */
+    height: 80%; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the icon without being cut off */
 }

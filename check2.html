@@ -28,12 +28,12 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">PEC.UP</a>
+            <a href="#" class="logo" id="pecup">PEC.UP</a>
             <ul class="nav-links">
-                <li class="large-gap"><a href="#home">Home</a></li>
-                <li class="large-gap"><a href="#reminders">Reminders</a></li>
-                <li class="large-gap"><a href="#resources">Resources</a></li>
-                <li class="large-gap"><a href="#archive">Archive</a></li>
+                <li class="large-gap"><a href="#home">&#8962 Home</a></li>
+                <li class="large-gap"><a href="#reminders">&#128197 Reminders</a></li>
+                <li class="large-gap"><a href="#resources">&#128221 Resources</a></li>
+                <li class="large-gap"><a href="#archive">&#128193 Archive</a></li>
             </ul>
             <a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" class="btn-contact">linkedin</a>
         </div>
@@ -59,7 +59,7 @@
     </section> -->
 
     <section id="home">
-        <h2>Home</h2>
+        <h2>Home</a></h2>
         <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.</p>
 
         <p>We offer previous year question papers for various examinations, including mid-semester exams (Mid-1, Mid-2), regular semester exams, and supplementary exams under the R23 regulations.</p>
@@ -144,7 +144,9 @@
         </p>
         <div class="resources-container">
             <div class="resources-column">
-                <h2 id="notes">Notes</h2>
+                <h2 id="notes">Notes
+                    <span><a href="#resources">!</a></span>
+                </h2>
                 <h3>Unit 1</h3>
                 <ul>
                     <li>LA&C</li>
@@ -183,7 +185,9 @@
                 </ul>
             </div>
             <div class="resources-column">
-                <h2 id="assignments">Assignments</h2>
+                <h2 id="assignments">Assignments
+                    <span><a href="#resources">!</a></span>
+                </h2>
                 <h3>Assignment 1</h3>
                 <ul>
                     <li>LA&C</li>
@@ -222,7 +226,9 @@
                 </ul>
             </div>
             <div class="resources-column">
-                <h2 id="tests">Class Tests</h2>
+                <h2 id="tests">Class Tests
+                    <span><a href="#resources">!</a></span>
+                </h2>
                 <h3>Test 1</h3>
                 <ul>
                     <li>LA&C</li>
@@ -260,7 +266,9 @@
                 </ul>
             </div>
             <div class="resources-column">
-                <h2 id="records">Records</h2>
+                <h2 id="records">Records
+                    <span><a href="#resources">!</a></span>
+                </h2>
                 <h3>Week 1</h3>
                 <ul>
                     <li>Python</li>
@@ -435,8 +443,23 @@
         <p>Yeswanth Madasu</p>
         <p>2nd Year CSE-B</p>
         <p>Phone No. 6969-696969</p>
-        <p>sinchan123v@gmail.com</p>
+        <p>work.pecup@gmail.com</p>
     </section>
+
+    <div class="overlay-container">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="overlay-button">
+            <img src="images/home.png" alt="Home" class="menu-icon"/>
+        </label>
+        
+        <div class="menu">
+            <!-- <a href="#home"><p class="menu-icon">&#8962</p></a> -->
+            <a href="#top"><img src="images/home.png" alt="Home" class="menu-icon" /></a>
+            <a href="#reminders"><img src="images/reminders.png" alt="Reminders" class="menu-icon" /></a>
+            <a href="#resources"><img src="images/resources.png" alt="Resources" class="menu-icon" /></a>
+            <a href="#archive"><img src="images/archive.png" alt="Archive" class="menu-icon" /></a>
+        </div>
+    </div>
 
     
 
@@ -477,12 +500,12 @@
             </div>
         </div>
     </footer>
-    <button class="overlay-button" onclick="scrollToHome()">Go to Home</button>
+    <!-- <button class="overlay-button" onclick="scrollToHome()">Go to Home</button>
     <script>
         function scrollToHome() {
             document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
         }
-    </script>
+    </script> -->
     <script src="script.js"></script>
 </body>
 </html>
