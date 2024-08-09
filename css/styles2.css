@@ -330,3 +330,58 @@ html {
     margin-bottom: 0px;
 }
 
+#resources {
+    padding: 50px 20px;
+}
+
+.resources-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between columns */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 20px; /* Spacing between columns */
+}
+
+.resources-column {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width of each column */
+    padding: 10px;
+    /* border: 1px solid #ddd; Optional border for better visual separation */
+}
+
+.resources-column h2 {
+    margin-top: 0;
+}
+
+.resources-column h3 {
+    margin-top: 0px;
+}
+
+.resources-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources-column ul li {
+    margin-bottom: 0px;
+}
+
+.overlay-button {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px;  /* Position from the right */
+    padding: 10px 20px;
+    background-color: #ff5733; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.overlay-button:hover {
+    background-color: #8e0000; /* Darker color on hover */
+}
