@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEC.UP</title>
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/style3.css">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Favicon for different sizes -->
@@ -26,11 +26,14 @@
     </script>
 </head>
 <body>
-    <nav class="navbar">
+
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+
+    <nav class="mobile-nav" id="mobilenav">
         <div class="container">
             <a href="#" class="logo" id="pecup">PEC.UP</a>
             <ul class="nav-links">
-                <li class="large-gap"><a href="#home">&#8962 Home</a></li>
+                <li class="large-gap"><a href="#top">&#8962 Home</a></li>
                 <li class="large-gap"><a href="#reminders">&#128197 Reminders</a></li>
                 <li class="large-gap"><a href="#resources">&#128221 Resources</a></li>
                 <li class="large-gap"><a href="#archive">&#128193 Archive</a></li>
@@ -449,15 +452,15 @@
     <div class="overlay-container">
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="overlay-button">
-            <img src="images/home.png" alt="Home" class="menu-icon"/>
+            <img src="images/dots.gif" alt="Home" class="menu-icon"/>
         </label>
         
         <div class="menu">
             <!-- <a href="#home"><p class="menu-icon">&#8962</p></a> -->
-            <a href="#top"><img src="images/home.png" alt="Home" class="menu-icon" /></a>
+            <a href="#top"><img src="images/home.gif" alt="Home" class="menu-icon" /></a>
             <a href="#reminders"><img src="images/reminders.png" alt="Reminders" class="menu-icon" /></a>
-            <a href="#resources"><img src="images/resources.png" alt="Resources" class="menu-icon" /></a>
-            <a href="#archive"><img src="images/archive.png" alt="Archive" class="menu-icon" /></a>
+            <a href="#resources"><img src="images/document.png" alt="Resources" class="menu-icon" /></a>
+            <a href="#archive"><img src="images/folder.png" alt="Archive" class="menu-icon" /></a>
         </div>
     </div>
 
@@ -507,5 +510,27 @@
         }
     </script> -->
     <script src="script.js"></script>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        navToggle.addEventListener('click', () => {
+            if (navMenu.classList.contains('inactive')) {
+                navMenu.classList.remove('inactive');
+                navMenu.classList.add('active');
+            } else {
+                navMenu.classList.remove('active');
+                navMenu.classList.add('inactive');
+            }
+        });
+    </script>
+
+    <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+    var nav = document.getElementById('mobileNav');
+    nav.classList.toggle('active');
+    });
+    </script>
 </body>
 </html>
