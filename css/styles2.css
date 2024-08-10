@@ -442,3 +442,31 @@ html {
 }
 
 
+.animated-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 2px solid;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.typing-effect {
+    width: 100%;
+    animation: typing 2s steps(20) infinite alternate, blink 0.75s step-end infinite;
+}
+
+.animated-text:hover {
+    color: #ff5733; /* Hover color */
+}
