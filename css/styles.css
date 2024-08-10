@@ -83,6 +83,7 @@ body {
 #hero {
     background-color: #f4f4f4;
     padding: 50px 20px;
+    padding-bottom: 5px;
     text-align: center;
 }
 
@@ -109,8 +110,8 @@ body {
 .btn-project {
     /* here i have set new project button to hide */
     /* display: none; */
-    background-color: #000;
-    color: #fff;
+    background-color: #ff5733;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -441,18 +442,6 @@ html {
     object-fit: contain; /* Ensure the image fits within the icon without being cut off */
 }
 
-
-
-.animated-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    display: inline-block;
-    white-space: nowrap;
-    border-right: 2px solid;
-    overflow: hidden;
-}
-
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -463,13 +452,48 @@ html {
     50% { border-color: black; }
 }
 
+.text-container {
+    background-color: #f4f4f4; /* Background color slightly different from white */
+    padding: 10px; /* Adjust padding as needed */
+    max-width: 100%; /* Ensure container doesn't overflow */
+    box-sizing: content-box; /* Include padding in width calculation */
+    overflow: hidden; /* Prevent horizontal overflow */
+    word-wrap: break-word; /* Break long words to fit within the container */
+    text-align: left; /* Align text to the left */
+}
+
+.animated-text {
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+    color: black;
+    display: inline-block;
+    border-right: 2px solid;
+    overflow: hidden; /* Prevent horizontal overflow */
+    white-space: normal; /* Allow text to wrap to the next line */
+}
+
 .typing-effect {
-    width: 100%;
+    width: 100%; /* Ensure it uses the full width of the container */
     animation: typing 2s steps(20) infinite alternate, blink 0.75s step-end infinite;
 }
 
-.animated-text:hover {
-    color: #ff5733; /* Hover color */
+.centered-text {
+    text-align: center; /* Center the text horizontally within the <p> tag */
+    margin-top: 50; /* Remove default margin */
+    padding-top: 2%; !important
 }
 
+.pickup{
+    color: #ff5733;
+    font-size: 2rem;
+}
 
+#reminders a {
+    color: #ff5733; /* Change to your desired color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#reminders a :hover {
+    text-decoration: underline; /* Optionally add underline on hover */
+}
