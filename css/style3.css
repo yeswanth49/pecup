@@ -37,7 +37,7 @@ body {
 
 .navbar .nav-links li.large-gap {
     padding: 1px;
-    margin: 0 20px; /* Larger gap for specific items */
+    margin: 0 10px; /* Larger gap for specific items */
     font-family: monospace;
     font-size: 2rem;
 }
@@ -439,4 +439,49 @@ html {
     width: 80%; /* Scale down the image to 80% of the icon size */
     height: 80%; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image fits within the icon without being cut off */
+}
+/* Base styles for desktop */
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Keep links aligned to the right on desktop */
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px; /* Spacing between links on desktop */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Color of the links */
+    font-size: 18px;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex; /* Flexbox for horizontal alignment */
+        flex-direction: row; /* Side-by-side alignment */
+        justify-content: space-around; /* Distribute links evenly */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: #333; /* Background color for mobile nav */
+    }
+
+    .nav-links li {
+        flex: 1; /* Allow links to take up equal space */
+        margin: 0;
+        text-align: center; /* Center the text within each link */
+    }
+
+    .nav-links a {
+        padding: 10px 5px; /* Adjust padding for better fit */
+        text-align: center; /* Center text within the link */
+        color: white; /* Text color */
+        font-size: 14px; /* Reduce font size to fit */
+        white-space: nowrap; /* Prevent text wrapping */
+        display: block;
+        width: 100%; /* Ensure full width for each link */
+    }
 }

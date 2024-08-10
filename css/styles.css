@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     font-size: 1.1rem;
 }
+
 /* Navbar */
 .navbar {
     background-color: #000;
@@ -106,7 +107,8 @@ body {
 }
 
 .btn-project {
-    /* display: none; here i have set new project button to hide */
+    /* here i have set new project button to hide */
+    /* display: none; */
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
@@ -282,4 +284,161 @@ html {
         gap: 20px; /* Reduce gap for smaller screens */
     }
 }
+/* Style for links inside the address section */
+#address_section a, #reminders a {
+    color: white; /* Change to your desired color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#address_section a:hover, #reminders a :hover {
+    color: #ff5733; /* Change color on hover */
+    text-decoration: none; /* Optionally add underline on hover */
+}
+
+#archive {
+    padding: 50px 20px;
+}
+
+.archive-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between columns */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 20px; /* Spacing between columns */
+}
+
+.archive-column {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width of each column */
+    padding: 10px;
+    /* border: 1px solid #ddd; Optional border for better visual separation */
+}
+
+.archive-column h2 {
+    margin-top: 0;
+}
+
+.archive-column h3 {
+    margin-top: 0px;
+}
+
+.archive-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.archive-column ul li {
+    margin-bottom: 0px;
+}
+
+#resources {
+    padding: 50px 20px;
+}
+
+.resources-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between columns */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 20px; /* Spacing between columns */
+}
+
+.resources-column {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width of each column */
+    padding: 10px;
+    /* border: 1px solid #ddd; Optional border for better visual separation */
+}
+
+.resources-column h2 {
+    margin-top: 0;
+}
+
+.resources-column h3 {
+    margin-top: 0px;
+}
+
+.resources-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources-column ul li {
+    margin-bottom: 0px;
+}
+/* Make the overlay container stick to the bottom-right corner */
+.overlay-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+}
+
+/* Styling for the overlay button */
+.overlay-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Styling for the menu */
+.menu {
+    position: absolute;
+    bottom: 70px; /* Adjust this value depending on how much space you need */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Display the menu with animation when the button is clicked */
+#menu-toggle:checked + .overlay-button + .menu {
+    opacity: 1;
+    transform: translateY(0); /* Move to its normal position */
+}
+
+/* Styling for each icon in the menu */
+.menu-icon {
+    margin: 10px 0;
+    cursor: pointer;
+    color: black;
+    background-color: #ff5733;
+    padding: 8px; /* Reduce padding to make more room */
+    border-radius: 36%;
+    font-size: 24px;
+    text-align: center;
+    width: 35px; /* Reduce width */
+    height: 35px; /* Reduce height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the images inside the menu icons */
+.menu-icon img {
+    width: 80%; /* Scale down the image to 80% of the icon size */
+    height: 80%; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the icon without being cut off */
+}
+
 
