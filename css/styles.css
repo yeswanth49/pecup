@@ -497,3 +497,8 @@ html {
 #reminders a :hover {
     text-decoration: underline; /* Optionally add underline on hover */
 }
+
+#contact a,#home a{
+    color: #ff5733;
+    text-decoration: none;
+}
