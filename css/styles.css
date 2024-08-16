@@ -1,92 +1,23 @@
 body {
-    font-family: monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #000;
-    padding: 10px 20px;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .nav-links li {
-    margin: 0 10px; /* Smaller gap for remaining items */
-}
-
-.navbar .nav-links li.large-gap {
-    padding: 15px;
-    margin: 0 50px; /* Larger gap for specific items */
-    font-family: monospace;
-    font-size: 2rem;
-}
-
-.navbar .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 50px; /* Adjust gap between Work, Agency, Services, Industries */
-}
-
-.nav-links .hidden-links {
-    display: none; /* here i have set to instagram to hide */
-    gap: 15px; /* Adjust gap for the hidden links */
-}
-
-.nav-links .hidden-links a {
-    display: inline-block;
-    max-width: 60px; /* Adjust the width as needed */
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    transition: max-width 0.3s ease;
-}
-
-.nav-links .hidden-links a:hover {
-    max-width: 100px; /* Show more text on hover */
-}
-
-.btn-contact {
-    background-color: #ff5733;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
 #hero {
     background-color: #f4f4f4;
+    font-family: monospace;
     padding: 50px 20px;
     padding-bottom: 5px;
     text-align: center;
+    min-height: 320px; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -142,9 +73,12 @@ section {
     text-decoration: underline;
 }
 
+
+
 /* Footer */
 footer {
     background-color: #000;
+    /* font-family: monospace; here i have set font of footer */
     color: #fff;
     padding: 50px 20px;
 }
@@ -480,8 +414,8 @@ html {
 
 .centered-text {
     text-align: center; /* Center the text horizontally within the <p> tag */
-    margin-top: 50; /* Remove default margin */
-    padding-top: 2%; !important
+    margin-top: 50px; /* Remove default margin */
+    padding-top: 2%;
 }
 
 .pickup{
