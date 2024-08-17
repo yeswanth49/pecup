@@ -374,12 +374,14 @@ html {
     opacity: 0; /* Start hidden */
     transform: translateY(20px); /* Start slightly below */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    pointer-events: none;
 }
 
 /* Display the menu with animation when the button is clicked */
 #menu-toggle:checked + .overlay-button + .menu {
     opacity: 1;
     transform: translateY(0); /* Move to its normal position */
+    pointer-events: auto;
 }
 
 /* Styling for each icon in the menu */
