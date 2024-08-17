@@ -7,11 +7,13 @@
     <title>PEC.UP</title>
     <!-- Content Security Policy Meta Tag -->
     <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' https://www.googletagmanager.com;
-        style-src 'self';
-        img-src 'self';
-        ">
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self';
+    connect-src 'self' https://www.google-analytics.com;
+    object-src 'self';
+    ">
     <link rel="stylesheet" href="css/nav_styles.css">
     <link rel="stylesheet" href="css/scrooling_text.css">
     <link rel="stylesheet" href="css/watermark.css">
@@ -118,7 +120,9 @@
         <h2>Reminders</h2>
         <div id="reminder-text">
             <ul>
-                <p>Mid 1 Timetable!! <a href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing">link</a></p>
+                <p>Mid 1 Timetable!! <a
+                        href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing">link</a>
+                </p>
                 <p>Results are Uploaded!! <a href="Mid 1 t">link</a></p>
                 <!-- <p>Bring DLCO Class Test Notebook!! for CSE-B</p> -->
             </ul>
@@ -138,36 +142,6 @@
                 <span class="countdown" id="countdown3"></span>
             </p> -->
         </ul>
-        <script>
-            function updateCountdowns() {
-                const deadlines = {
-                    "countdown1": new Date("2024-08-17"), // deadline 1
-                    "countdown2": new Date("2024-08-20"), // deadline 2
-                    "countdown3": new Date("2024-08-20"), // deadline 3
-                };
-        
-                const today = new Date();
-                today.setHours(0, 0, 0, 0); // Set to start of the day
-        
-                for (const [id, deadlineDate] of Object.entries(deadlines)) {
-                    const timeDiff = deadlineDate - today;
-                    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
-        
-                    // Update the HTML with the countdown
-                    const countdownElement = document.getElementById(id);
-                    if (daysLeft > 1) {
-                        countdownElement.textContent = ` [${daysLeft} days left]`;
-                    } else if (daysLeft === 1) {
-                        countdownElement.textContent = ` [1 day left]`;
-                    } else {
-                        countdownElement.textContent = ' [Deadline passed]';
-                    }
-                }
-            }
-        
-            // Run the function when the page loads
-            window.onload = updateCountdowns;
-        </script>
     </section>
 
     <div style="height: 20px;"></div> <!-- Spacer -->
@@ -189,7 +163,8 @@
                 </h2>
                 <h3>Unit 1</h3>
                 <ul>
-                    <li><a href="https://drive.google.com/file/d/15wn4D4PvQ7P5M2XMIxpv__8CDcvQs_QS/view?usp=sharing" target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/15wn4D4PvQ7P5M2XMIxpv__8CDcvQs_QS/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
                     <li><a href="https://drive.google.com/file/d/130MKouxcby66c2HBTM422Yez11jWJyiJ/view?usp=sharing"
                             target="_blank">ADS</a></li>
                     <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li> -->
@@ -580,7 +555,6 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 
     <script>
         const texts = ["Bored with studies? Not anymore!", "for you and us!", "resources that are actually useful"];
@@ -619,6 +593,37 @@
             });
         });
 
+    </script>
+
+    <script>
+        function updateCountdowns() {
+            const deadlines = {
+                "countdown1": new Date("2024-08-17"), // deadline 1
+                "countdown2": new Date("2024-08-20"), // deadline 2
+                // "countdown3": new Date("2024-08-20"), // deadline 3
+            };
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Set to start of the day
+
+            for (const [id, deadlineDate] of Object.entries(deadlines)) {
+                const timeDiff = deadlineDate - today;
+                const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
+
+                // Update the HTML with the countdown
+                const countdownElement = document.getElementById(id);
+                if (daysLeft > 1) {
+                    countdownElement.textContent = ` [${daysLeft} days left]`;
+                } else if (daysLeft === 1) {
+                    countdownElement.textContent = ` [1 day left]`;
+                } else {
+                    countdownElement.textContent = ' [Deadline passed]';
+                }
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = updateCountdowns;
     </script>
 
 
