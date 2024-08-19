@@ -65,7 +65,7 @@ section {
 #home, #reminders, #resources, #archive {
     padding: 20px;
     background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
     border: 1px solid rgba(135, 132, 132, 0.5);
     border-bottom: 1px solid rgba(135, 132, 132, 0.5);
     border-right: 1px solid rgba(135, 132, 132, 0.5);
