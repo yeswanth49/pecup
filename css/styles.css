@@ -61,8 +61,12 @@ section {
     text-decoration: underline;
 
 } */
+
+#imp h4{
+    color: #ff5733;
+}
  
-#home, #reminders, #resources, #archive {
+#imp, #home, #reminders, #resources, #archive {
     padding: 20px;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(1px);
