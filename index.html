@@ -38,6 +38,17 @@
 
         gtag('config', 'G-MQ8G7RBY0H');
     </script>
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "961b2ded-f286-45bb-a843-cfec615f565c",
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -806,16 +817,6 @@
 
         // Run the function when the page loads
         window.onload = updateCountdowns;
-    </script>
-
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-        window.OneSignalDeferred = window.OneSignalDeferred || [];
-        OneSignalDeferred.push(async function (OneSignal) {
-            await OneSignal.init({
-                appId: "961b2ded-f286-45bb-a843-cfec615f565c",
-            });
-        });
     </script>
 
 </body>
