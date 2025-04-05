@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" type="image/png" href="./images/android-chrome-512x512.png">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a979c2473.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="mhome.css">
+    <title>PEC.UP</title>
+</head>
+
+<body>
+    <div class="content-container-1">
+        <div class="content-container-2">
+
+
+            <div class="nav-flex">
+
+                <header class="sidenav">
+                    <ul>
+                        <li><a class="st_logo" href="index.html"><img src="./images/favicon.ico" alt="Logo"></a></li>
+                        <li><a href="work.html">Home</a></li>
+                        <li><a href="work.html">1st Year</a></li>
+                        <li><a href="contact.html">2nd Year</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </header>
+
+            </div>
+
+            <div class="content-flex">
+                <div class="padding-2 padding-3">
+
+                    <div class="hero-bg animate__animated animate__fadeIn">
+
+                        <div class="hero-body">
+                            <div class="hero-bottom-padding animate__animated animate__fadeInLeft">
+                                <p class="intro-a">PEC.UP has </p>
+                            </div>
+                            <div class="hero-text-container-1">
+                                <p class="intro-b animate__animated   animate__fadeInRight">notes, assignments,</p>
+                            </div>
+
+                            <div class="intro-flex">
+                                <p class="intro-c animate__animated animate__fadeInUp fast ">&</p>
+                                <div class="hero-text-container-2">
+                                    <p class="intro-b animate__animated animate__fadeInLeft">records</p>
+                                    <div class="hero-padding animate__animated animate__fadeInDown"> <a class="link-1"
+                                            href="work.html">view work</a> <a class="link-1" href="about.html">view
+                                            about</a> </div>
+                                    <div class="animate__animated animate__fadeIn">
+                                        <p class="continue-to-scroll">or continue scrolling</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <!-- Greensock -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+
+        <!-- animate -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <!-- animate on scroll -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init(
+                {
+                    once: true
+                }
+            );
+        </script>
+
+
+        <!-- Waypoints -->
+        <script src="../node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+
+        <script src="js/burger_min.js"></script>
+        <script src="js/scripts-min.js"></script>
+
+        <script>
+            // Optional JavaScript for mobile/click support
+            document.addEventListener('DOMContentLoaded', () => {
+                const dropdownToggle = document.querySelector('.dropdown > a');
+                const submenu = document.querySelector('.submenu');
+
+                // Toggle dropdown on mobile or for click interactions
+                dropdownToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
+
+</body>
+
+</html>

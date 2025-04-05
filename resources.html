@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Styles */
+        .navbar {
+            background-color: #ff5733;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .navbar-links a:hover {
+            color: #333;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background: linear-gradient(135deg, #ff5733 0%, #ff8c66 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background-color: white;
+            color: #ff5733;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .hero-cta:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Resources Container Styles */
+        .resources-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 50px 5%;
+        }
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+            max-width: 100%;
+            border-top: 4px solid #ff5733;
+            transition: transform 0.3s ease;
+        }
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+        /* ... (previous dropdown styles remain the same) ... */
+
+        /* Features Section */
+        .features-section {
+            background-color: white;
+            padding: 50px 5%;
+            text-align: center;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-item {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff5733;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer-links {
+            margin-top: 15px;
+        }
+        .footer-links a {
+            color: #ff5733;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="navbar-logo">Academic Resources</div>
+        <div class="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#resources">Resources</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Ultimate Academic Resource Hub</h1>
+            <p class="hero-subtitle">Discover, access, and organize your study materials with ease. Everything you need, right at your fingertips.</p>
+            <a href="#resources" class="hero-cta">Explore Resources</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Why Choose Our Resources Platform?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <h3>Comprehensive Materials</h3>
+                <p>Access a wide range of study materials, notes, and assignments for multiple subjects.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <h3>Easy Navigation</h3>
+                <p>Intuitive dropdown system allows quick and easy access to your required resources.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <h3>Constantly Updated</h3>
+                <p>We continuously update our resources to keep you ahead in your academic journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Container -->
+    <div class="resources-container">
+        <!-- Notes Section -->
+        <div class="resource-card">
+            <div class="dropdown-header" onclick="toggleDropdown(this)">
+                <h2>📖 Notes</h2>
+                <div class="dropdown-icon">▼</div>
+            </div>
+            <div class="dropdown-content">
+                <div class="nested-dropdown">
+                    <div class="nested-dropdown-header" onclick="toggleNestedDropdown(this)">
+                        <h3>Unit 1</h3>
+                        <div class="dropdown-icon">▼</div>
+                    </div>
+                    <div class="nested-dropdown-content">
+                        <div class="resource-links">
+                            <a href="https://drive.google.com/file/d/1JT2ciWwgF2c-BO1fabbyByeL_l3PXd_4/view?usp=sharing" class="resource-link" target="_blank">DMGT</a>
+                            <a href="https://drive.google.com/file/d/1F1Xzi8SkGvjddH6mJP8AiZrn9js_yUy_/view?usp=sharing" class="resource-link" target="_blank">ADS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nested-dropdown">
+                    <div class="nested-dropdown-header" onclick="toggleNestedDropdown(this)">
+                        <h3>Unit 2</h3>
+                        <div class="dropdown-icon">▼</div>
+                    </div>
+                    <div class="nested-dropdown-content">
+                        <div class="resource-links">
+                            <a href="https://drive.google.com/file/d/1DYCjZ31IYQLlbUW9HSBUOuL_FxcJU0Vs/view?usp=sharing" class="resource-link" target="_blank">DMGT</a>
+                            <a href="https://drive.google.com/file/d/1F2xxusTYfUGjBtEXRXujyjzVQRnZYY23/view?usp=drivesdk" class="resource-link" target="_blank">ADS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Resource Cards (Assignments, Papers, Records) remain the same as in previous example -->
+        <!-- ... (repeat the resource cards from previous example) ... -->
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div>
+            <p>&copy; 2024 Academic Resources Hub. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(element) {
+            const dropdownContent = element.nextElementSibling;
+            element.classList.toggle('active');
+            dropdownContent.classList.toggle('active');
+        }
+
+        function toggleNestedDropdown(element) {
+            const nestedDropdownContent = element.nextElementSibling;
+            element.classList.toggle('active');
+            nestedDropdownContent.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

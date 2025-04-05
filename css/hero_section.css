@@ -1,0 +1,31 @@
+#hero {
+    background-color: #f4f4f4;
+    font-family: monospace;
+    padding: 50px 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    min-height: 320px; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span, .hero-content p .pickup {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.hero-content h1 span:hover, .hero-content p .pickup :hover{
+    color: #ff5733;
+    cursor: default;
+}
